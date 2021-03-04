@@ -3,10 +3,9 @@ const http = require('http')
 const socketio = require('socket.io')
 const gameLogic = require('./game-logic')
 const app = express()
-
-const cors = require('cors')
+const cors = require('cors');
 app.use(cors());
-app.options('*', cors());
+
 
 
 /**
@@ -21,6 +20,13 @@ app.options('*', cors());
 
 const server = http.createServer(app)
 const io = socketio(server)
+// const io = require('socket.io')(server, {
+//     cors: {
+//       origin: '*',
+//     }
+//   });
+
+
 
 app.get('/',(req,res)=>{
     res.send("This is Backend Server For Chess With Friends Created By Arihant")
