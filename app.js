@@ -3,7 +3,10 @@ const http = require('http')
 const socketio = require('socket.io')
 const gameLogic = require('./game-logic')
 const app = express()
+
 const cors = require('cors')
+app.use(cors());
+
 
 /**
  * Backend flow:
@@ -22,7 +25,7 @@ app.get('/',(req,res)=>{
     res.send("This is Backend Server For Chess With Friends Created By Arihant")
 })
 
-app.use(cors());
+
 // get the gameID encoded in the URL. 
 // check to see if that gameID matches with all the games currently in session. 
 // join the existing game session. 
