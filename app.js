@@ -17,6 +17,9 @@ const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
 
+app.get('/',(req,res)=>{
+    res.send("This is Backend Server For Chess With Friends Created By Arihant")
+})
 // get the gameID encoded in the URL. 
 // check to see if that gameID matches with all the games currently in session. 
 // join the existing game session. 
