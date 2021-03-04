@@ -13,6 +13,7 @@
     "url": "git+https://github.com/ProjectsByJackHe/multiplayer-chess-game-backend.git"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "4.17.1",
     "socket.io": "2.3.0"
   },
